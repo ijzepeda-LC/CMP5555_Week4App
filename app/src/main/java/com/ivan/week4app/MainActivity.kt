@@ -66,9 +66,12 @@ class MainActivity : AppCompatActivity() {
             // When you are calling a new Activity, you do it with an INTENT
             // This is how you create an Intent, and want to call the activity called "SecondActivity"
             var intent  =  Intent(this, SecondActivity::class.java)
-            //
-            intent.putExtra("name",nameText.text.toString())
-            intent.putExtra("lastName",lastNameText.text.toString())
+            // When you want to send information to the following screen, you can do it adding EXTRA information to the INTENT
+            // where the first argument (transfering_name) is the name of how you are going to identify the variable,
+            // and the second argument (nameText.text.toString()) is the value
+            // MAke sure the datatype of your variable match on both activities, sending a string using ".toString()"
+            intent.putExtra("transfering_name",nameText.text.toString())
+            intent.putExtra("transfering_lastName",lastNameText.text.toString())
 
             startActivity(intent)
 

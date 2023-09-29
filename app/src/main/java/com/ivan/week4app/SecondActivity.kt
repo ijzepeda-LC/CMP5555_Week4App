@@ -9,11 +9,13 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        // Whe You are receiveing information from previous activity, you fetch it from the intent
-        // using getStringExtra for String data types. or getInteExtra for numbers of type Integer
+        // When You are receiving information from previous activity, you fetch it from the intent
         // You have to assign the value from the extra to a new variable.
-        var name = intent.getStringExtra("name")
-        var lastName = intent.getStringExtra("lastName")
+        // MAke sure the datatype of your variable match on both activities,
+        // using getStringExtra for String data types. or getInteExtra for numbers of type Integer
+
+        var name = intent.getStringExtra("transfering_name")
+        var lastName = intent.getStringExtra("transfering_lastName")
         // var age = intent.getIntExtra("age")
 
         // Once you have received the information from previous activity, you can use it in you screen however you want
